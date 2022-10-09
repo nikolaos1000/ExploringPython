@@ -1,6 +1,7 @@
-radio.setGroup(1)
-basic.forever(function on_forever() {
+radio.setGroup(2)
+basic.forever(function () {
+    basic.showString("Micro-2")
     basic.showNumber(input.temperature())
-    radio.sendNumber(input.temperature())
-    basic.pause(1000)
+    radio.sendValue("Micro-2", input.temperature())
+    basic.pause(10000)
 })
